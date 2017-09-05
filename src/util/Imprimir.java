@@ -1,5 +1,8 @@
 package util;
 
+import java.util.List;
+
+import algoritmos.grafos.Aresta;
 import estruturas.Elemento;
 import estruturas.ListaLigada;
 
@@ -29,6 +32,20 @@ public class Imprimir {
 			proximo = proximo.getProximo();
 		}
 		System.out.println(" ]");
+	}
+
+	public static void imprimir(List<Aresta> arestas) {
+		StringBuilder builder = new StringBuilder();
+		builder.append("A{");
+		for (int i = 0; i < arestas.size(); i++) {
+			builder.append(arestas.get(i).toString());
+			if(i < arestas.size() - 1 ) {
+				builder.append(",");
+			}
+		}
+		builder.append("}");
+		
+		System.out.println(builder.toString());
 	}
 
 }

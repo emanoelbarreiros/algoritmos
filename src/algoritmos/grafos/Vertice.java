@@ -1,6 +1,6 @@
 package algoritmos.grafos;
 
-public class Vertice {
+public class Vertice implements Comparable<Vertice>{
 	
 	public static final int BRANCO = 0;
 	public static final int CINZA = 1;
@@ -15,6 +15,8 @@ public class Vertice {
 	private int descoberta;
 	
 	private int finalizacao;
+	
+	private int custoMinimo;
 	
 	public Vertice(int id) {
 		this.id = id;
@@ -58,6 +60,14 @@ public class Vertice {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public int getCustoMinimo() {
+		return custoMinimo;
+	}
+
+	public void setCustoMinimo(int custoMinimo) {
+		this.custoMinimo = custoMinimo;
 	}
 
 	@Override
@@ -105,9 +115,20 @@ public class Vertice {
 				+ "(c:" + sCor 
 				+ ",p:" + idPred
 				+ ",d:" + descoberta 
-				+ ",f:" + finalizacao + ")";
+				+ ",f:" + finalizacao 
+				+ ",cm:" + custoMinimo + ")";
 		
 		return retorno;
+	}
+	
+	public int compareTo(Vertice outro) {
+		if (this.custoMinimo < outro.getCustoMinimo()) {
+			return -1;
+		} else if (this.custoMinimo > outro.getCustoMinimo()) {
+			return 1;
+		} else {
+			return 0;
+		}
 	}
 
 }

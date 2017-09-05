@@ -19,7 +19,7 @@ public class TestaBuscaEmProfundidade {
 		
 		BuscaEmProfundidade b = new BuscaEmProfundidade();
 		
-		b.bep(g);
+		b.executar(g);
 		
 		System.out.println(g);
 	}

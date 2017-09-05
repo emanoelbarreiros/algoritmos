@@ -1,10 +1,10 @@
 package algoritmos.grafos;
 
-public class BuscaEmProfundidade {
+public class BuscaEmProfundidade implements Runnable{
 	
 	private static int tempo = 0;
 	
-	public void bep(Grafo grafo){
+	public void executar(Grafo grafo){
 		tempo = 0;
 		
 		for (Vertice v : grafo.getVertices()) {
@@ -14,25 +14,31 @@ public class BuscaEmProfundidade {
 		
 		for (Vertice v : grafo.getVertices()) {
 			if(v.getCor() == Vertice.BRANCO) {
-				bepVisitar(grafo, v);
+				visitar(grafo, v);
 			}
 		}
 		
 	}
 	
-	public void bepVisitar(Grafo grafo, Vertice vertice) {
+	public void visitar(Grafo grafo, Vertice vertice) {
 		tempo++;
 		vertice.setDescoberta(tempo);
 		vertice.setCor(Vertice.CINZA);
-		for (Vertice v : grafo.adjacentes(vertice)) {
+		for (Vertice v : grafo.adjacentesNaoDirecionados(vertice)) {
 			if (v.getCor() == Vertice.BRANCO) {
 				v.setPredecessor(vertice);
-				bepVisitar(grafo, v);
+				visitar(grafo, v);
 			}
 		}
 		
 		vertice.setCor(Vertice.PRETO);
 		vertice.setFinalizacao(++tempo);
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
