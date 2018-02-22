@@ -25,6 +25,7 @@ public class CountingSort {
 	
 	public void doNothing() {
 		int a = 20;
+		int b = 30;
 		return;
 	}
 
