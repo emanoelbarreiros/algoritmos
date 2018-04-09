@@ -3,7 +3,7 @@ package recursao;
 public class Questao26 {
 	
 	public static void main(String[] args) {
-		/*
+		
 		int[][] maze=  {{0,0,1,1,1,1,1,1,1,1},
 						{1,0,0,1,1,1,1,1,1,1},
 						{1,1,0,1,1,1,1,1,1,1},
@@ -14,13 +14,15 @@ public class Questao26 {
 						{0,1,0,0,0,1,0,0,0,1},
 						{0,1,0,1,0,1,0,1,1,1},
 						{0,0,0,1,0,0,0,0,0,2}};
-						*/
+						
+		/*
 		int[][] maze = {{0,0,0,0,1,1},
 						{1,0,1,0,0,0},
 						{1,0,1,1,0,1},
 						{0,0,1,0,1,1},
 						{1,0,0,0,1,2},
 						{1,0,1,0,0,0}};
+						*/
 		
 		Escapar escapar = new Escapar(maze, 5, 4);
 		escapar.escapar(0, 0);
