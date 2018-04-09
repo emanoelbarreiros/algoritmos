@@ -12,7 +12,7 @@ public class QuickSort {
 	
 	public int particionar(int[] v, int inicio, int fim) {
 		int pivo = v[fim];
-		int i = inicio;
+		int i = inicio - 1;
 		for (int j = inicio; j <= fim - 1; j++) {
 			if(v[j] <= pivo) {
 				i++;

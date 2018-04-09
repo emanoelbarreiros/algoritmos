@@ -5,7 +5,7 @@ import util.Imprimir;
 public class TestaInsertionSort {
 
 	public static void main(String[] args) {
-		int[] v = {4, 2, 6, 7, 1, 9, 3};
+		int[] v = {3,1,2,6,5,4};
 		
 		InsertionSort algoritmo = new InsertionSort();
 		
