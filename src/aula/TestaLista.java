@@ -21,6 +21,8 @@ public class TestaLista {
 		
 		l.imprimir();
 		
+		System.out.println(l.procurar("00000000000"));
+		
 	}
 
 }

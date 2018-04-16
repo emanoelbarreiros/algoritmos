@@ -1,6 +1,6 @@
 package aula;
 
-public class Pessoa {
+public class Pessoa extends Procuravel{
 	
 	private String cpf;
 	private String nome;
@@ -8,6 +8,10 @@ public class Pessoa {
 	public Pessoa(String cpf, String nome) {
 		this.cpf = cpf;
 		this.nome = nome;
+	}
+	
+	public String getChave() {
+		return this.cpf;
 	}
 
 	public String getCpf() {
