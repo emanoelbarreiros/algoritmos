@@ -9,6 +9,9 @@ public class TestaLista {
 		Pessoa p4 = new Pessoa("44444444444", "ananda");
 		Pessoa p5 = new Pessoa("55555555555", "adjailson");
 		Pessoa p6 = new Pessoa("66666666666", "samuel");
+		//Pessoa p7 = new Pessoa("66666666666", "samuel");
+		
+		//System.out.println(p6.equals(p7));
 		
 		Lista<Pessoa> l = new Lista<Pessoa>();
 		
@@ -18,10 +21,14 @@ public class TestaLista {
 		l.inserir(p4);
 		l.inserir(p5);
 		l.inserir(p6);
+		l.inserir(p3);
 		
 		l.imprimir();
 		
-		System.out.println(l.procurar("00000000000"));
+		l.excluir(p3);
+		l.imprimir();
+		
+		//System.out.println(l.procurar("00000000000"));
 		
 	}
 

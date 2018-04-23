@@ -24,4 +24,8 @@ public class Elemento<T> {
 	public void setProximo(Elemento<T> proximo) {
 		this.proximo = proximo;
 	}
+	
+	public boolean equals(Elemento outro) {
+		return this.v.equals(outro);
+	}
 }

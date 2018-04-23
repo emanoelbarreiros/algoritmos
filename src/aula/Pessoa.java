@@ -33,4 +33,8 @@ public class Pessoa extends Procuravel{
 	public String toString() {
 		return cpf + "-"+ nome;
 	}
+	
+	public boolean equals(Object outro) {
+		return this.cpf.equals(((Pessoa)outro).getCpf());
+	}
 }

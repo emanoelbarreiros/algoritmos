@@ -21,16 +21,31 @@ public class Lista<T extends Procuravel> {
 		}
 	}
 	
+	public void excluir(T item) {
+		if (primeiro != null && primeiro.getV().equals(item)) {
+			primeiro = primeiro.getProximo();
+		} else {
+			Elemento anterior = primeiro;
+			while(anterior != null) {
+				if (anterior.getProximo().getV().equals(item)) {
+					anterior.setProximo(anterior.getProximo().getProximo());
+					break;
+				} 
+				anterior = anterior.getProximo();
+			}
+		}
+	}
+	
 	public void imprimir() {
 		StringBuffer buffer = new StringBuffer();
 		if (primeiro != null) {
 			buffer.append(primeiro.getV());
-			buffer.append(";");
+			buffer.append(";\n");
 			
 			Elemento<T> proximo = primeiro.getProximo();			
 			while(proximo != null) {
 				buffer.append(proximo.getV());
-				buffer.append(";");
+				buffer.append(";\n");
 				proximo = proximo.getProximo();
 			}
 		}
