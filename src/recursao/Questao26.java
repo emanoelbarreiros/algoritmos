@@ -24,7 +24,7 @@ public class Questao26 {
 						{1,0,1,0,0,0}};
 						*/
 		
-		Escapar escapar = new Escapar(maze, 5, 4);
+		Escapar escapar = new Escapar(maze);
 		escapar.escapar(0, 0);
 		escapar.imprimir();
 	}

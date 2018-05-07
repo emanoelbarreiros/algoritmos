@@ -15,7 +15,7 @@ public class Escapar {
 	int SEM_SAIDA = 3;
 	int CAMINHO = 4;
 	
-	public Escapar(int[][] maze, int destinoX, int destinoY) {
+	public Escapar(int[][] maze) {
 		this.maze = maze;
 		this.altura = maze.length;
 		this.largura = maze[0].length;
@@ -55,7 +55,6 @@ public class Escapar {
 		}
 		
 		maze[y][x] = CAMINHO;
-		//imprimir();
 		
 		// tentar ir NORTE
 		if(escapar(x, y-1)) {
