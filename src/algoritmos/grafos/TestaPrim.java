@@ -9,6 +9,7 @@ public class TestaPrim {
 	public static void main(String[] args) {
 		Grafo g = new Grafo();
 		
+		/*
 		g.adicionarVertice(1);
 		g.adicionarVertice(2);
 		g.adicionarVertice(3);
@@ -33,10 +34,30 @@ public class TestaPrim {
 		g.adicionarAresta(8, 9, 7);
 		g.adicionarAresta(8, 1, 8);
 		g.adicionarAresta(8, 2, 11);
+		*/
+		
+		g.adicionarVertice(0);
+		g.adicionarVertice(1);
+		g.adicionarVertice(2);
+		g.adicionarVertice(3);
+		g.adicionarVertice(4);
+		g.adicionarVertice(5);
+		
+		g.adicionarAresta(0, 1, 6);
+		g.adicionarAresta(0, 2, 1);
+		g.adicionarAresta(0, 3, 5);
+		g.adicionarAresta(1, 2, 2);
+		g.adicionarAresta(2, 3, 2);
+		g.adicionarAresta(1, 4, 5);
+		g.adicionarAresta(2, 4, 6);
+		g.adicionarAresta(2, 5, 4);
+		g.adicionarAresta(3, 5, 4);
+		g.adicionarAresta(4, 5, 3);
+		
 		
 		Prim prim = new Prim();
 		
-		ArrayList<Aresta> arestas = prim.executar(g, 1);
+		ArrayList<Aresta> arestas = prim.executar(g, 0);
 		
 		Imprimir.imprimir(arestas);
 	}

@@ -23,6 +23,10 @@ public class Elemento {
 		this.proximo = proximo;
 	}
 	
+	public String toStrin() {
+		return valor+"";
+	}
+	
 	
 
 }

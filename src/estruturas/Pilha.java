@@ -27,5 +27,9 @@ public class Pilha {
 		}
 		
 	}
+	
+	public boolean vazia() {
+		return topo < 0;
+	}
 
 }

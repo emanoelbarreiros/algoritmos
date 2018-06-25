@@ -16,17 +16,23 @@ public class Prim {
 		
 		Vertice vertice = inicio;
 		while (!naoVisitados.isEmpty()) {
-			for (Aresta a : grafo.obterArestas(vertice)) {
+			ArrayList<Aresta> arestas = grafo.obterArestas(vertice);
+			for (Aresta a : arestas) {
 				if (naoVisitados.contains(a.outro(vertice))) {
 					arestasDisponiveis.add(a);
 				}
 			}
 			
-			Aresta a = arestasDisponiveis.remove();
+			Aresta a = arestasDisponiveis.remove(); 
+			/*
 			while(!naoVisitados.contains(a.getOrigem()) 
 					&& !naoVisitados.contains(a.getDestino())) {
+				//se ambos os vertices ja foram visitados, i.e. nao estao no 
+				//conjunto de nao visitados, pego uma nova aresta.
+				//queremos uma aresta que cruze o corte, ou seja, o destino precisa estar
+				//dentro dos nao visitados
 				a = arestasDisponiveis.remove();
-			}
+			}*/
 			retorno.add(a);
 			
 			if (naoVisitados.contains(a.getOrigem())){

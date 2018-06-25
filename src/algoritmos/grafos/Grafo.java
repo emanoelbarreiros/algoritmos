@@ -148,8 +148,6 @@ public class Grafo {
 		ArrayList<Vertice> retorno = new ArrayList<Vertice>();
 		
 		for (Aresta a : arestas) {
-			Vertice destino = a.getDestino();
-			
 			if (a.getOrigem().equals(v)) {
 				retorno.add(a.getDestino());
 			}
@@ -229,5 +227,16 @@ public class Grafo {
 			}
 		}
 		return segura;
+	}
+	
+	public void imprimirCaminho(Vertice origem, Vertice destino) {
+		if (origem.equals(destino)) {
+			System.out.println(origem.getId());
+		} else if (destino.getPredecessor() == null) {
+			System.out.println("Não existe caminho de " + origem.getId() + " até " + destino.getId());
+		} else {
+			imprimirCaminho(origem, destino.getPredecessor());
+			System.out.println(destino.getId());
+		}
 	}
 }

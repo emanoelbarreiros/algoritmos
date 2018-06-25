@@ -25,6 +25,13 @@ public class ListaLigada {
 		this.primeiro = primeiro;
 	}
 	
-	
+	public void imprimir() {
+		Elemento elementoAtual = primeiro;
+		System.out.println(elementoAtual.getValor());
+		while (elementoAtual.getProximo() != null) {
+			elementoAtual = elementoAtual.getProximo();
+			System.out.println(elementoAtual.getValor());
+		}
+	}
 
 }

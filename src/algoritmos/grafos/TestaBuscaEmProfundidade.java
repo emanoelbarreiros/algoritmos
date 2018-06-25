@@ -22,6 +22,8 @@ public class TestaBuscaEmProfundidade {
 		b.executar(g);
 		
 		System.out.println(g);
+		
+		g.imprimirCaminho(g.obterVertice(0), g.obterVertice(2));
 	}
 
 }
