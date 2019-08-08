@@ -7,7 +7,7 @@ import estruturas.ListaLigada;
 public class Questao2 extends ListaLigada {
 	
 	public void ordernar() {
-		int[] aux = new int[tamanho()];
+		Integer[] aux = new Integer[tamanho()];
 		int indice = 0;
 		
 		Elemento elem = getPrimeiro();

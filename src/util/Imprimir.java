@@ -1,5 +1,6 @@
 package util;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import algoritmos.grafos.Aresta;
@@ -13,6 +14,28 @@ public class Imprimir {
 	}
 
 	public static void imprimir(int[] v) {
+		System.out.print("[ ");
+		for (int i = 0; i < v.length; i++) {
+			System.out.print(v[i]);
+			if (i < v.length - 1) {
+				System.out.print(", ");
+			}
+		}
+		System.out.println(" ]");
+	}
+	
+	public static void imprimir(ArrayList<Integer> v) {
+		System.out.print("[ ");
+		for (int i = 0; i < v.size(); i++) {
+			System.out.print(v.get(i));
+			if (i < v.size() - 1) {
+				System.out.print(", ");
+			}
+		}
+		System.out.println(" ]");
+	}
+	
+	public static void imprimir(Integer[] v) {
 		System.out.print("[ ");
 		for (int i = 0; i < v.length; i++) {
 			System.out.print(v[i]);

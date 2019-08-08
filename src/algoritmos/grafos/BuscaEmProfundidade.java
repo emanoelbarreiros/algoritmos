@@ -4,7 +4,7 @@ public class BuscaEmProfundidade implements Runnable {
 	
 	private static int tempo = 0;
 	
-	public void executar(Grafo grafo){
+	public void executar(GrafoAdjacencia grafo){
 		tempo = 0;
 		
 		for (Vertice v : grafo.getVertices()) {
@@ -20,7 +20,7 @@ public class BuscaEmProfundidade implements Runnable {
 		
 	}
 	
-	public void visitar(Grafo grafo, Vertice vertice) {
+	public void visitar(GrafoAdjacencia grafo, Vertice vertice) {
 		tempo++;
 		vertice.setDescoberta(tempo);
 		vertice.setCor(Vertice.CINZA);

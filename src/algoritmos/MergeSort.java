@@ -1,7 +1,5 @@
 package algoritmos;
 
-import util.Imprimir;
-
 public class MergeSort {
 
 	public void ordenar(int[] v, int inicio, int fim) {

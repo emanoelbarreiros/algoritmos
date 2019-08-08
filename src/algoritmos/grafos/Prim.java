@@ -24,15 +24,6 @@ public class Prim {
 			}
 			
 			Aresta a = arestasDisponiveis.remove(); 
-			/*
-			while(!naoVisitados.contains(a.getOrigem()) 
-					&& !naoVisitados.contains(a.getDestino())) {
-				//se ambos os vertices ja foram visitados, i.e. nao estao no 
-				//conjunto de nao visitados, pego uma nova aresta.
-				//queremos uma aresta que cruze o corte, ou seja, o destino precisa estar
-				//dentro dos nao visitados
-				a = arestasDisponiveis.remove();
-			}*/
 			retorno.add(a);
 			
 			if (naoVisitados.contains(a.getOrigem())){

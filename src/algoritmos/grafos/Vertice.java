@@ -118,7 +118,8 @@ public class Vertice implements Comparable<Vertice>{
 				+ ",f:" + finalizacao 
 				+ ",cm:" + custoMinimo + ")";
 		
-		return retorno;
+		//return retorno;
+		return ""+id;
 	}
 	
 	public int compareTo(Vertice outro) {

@@ -4,7 +4,7 @@ public class TestaBuscaEmProfundidade {
 
 	public static void main(String[] args) {
 		
-		Grafo g = new Grafo();
+		GrafoAdjacencia g = new GrafoAdjacencia(4);
 		
 		g.adicionarVertice(0);
 		g.adicionarVertice(1);

@@ -178,7 +178,9 @@ public class Grafo {
 		StringBuilder builder = new StringBuilder();
 		builder.append("G = { \nV{");
 		for (int i = 0; i < vertices.size(); i++) {
-			builder.append(vertices.get(i).toString());
+			builder.append(vertices.get(i).toString()+"-");
+			builder.append("[d:"+vertices.get(i).getDescoberta()+",f:"+vertices.get(i).getFinalizacao()+"]");
+			
 			if(i < vertices.size() - 1 ) {
 				builder.append(", ");
 			}

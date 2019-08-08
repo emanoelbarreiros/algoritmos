@@ -1,17 +1,28 @@
 package algoritmos;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
 import util.Imprimir;
 
 public class TestaQuickSort {
 
 	public static void main(String[] args) {
-		int[] entrada = {4, 1, 7, 2, 1, 9, 6, 13, 10};
+		ArrayList<Integer> entrada = new ArrayList();
+		for (int i = 0; i < 1000000; i++) {
+			entrada.add(i);
+		}
+		
+		Collections.shuffle(entrada);
+		Imprimir.imprimir(entrada);
+		Integer[] entrada2 = new Integer[1000000];
+		entrada2 = entrada.toArray(entrada2);
 		
 		QuickSort q = new QuickSort();
+		q.ordenar(entrada2, 0, entrada2.length - 1);
 		
-		q.ordenar(entrada, 0, entrada.length - 1);
-		
-		Imprimir.imprimir(entrada);
+		Imprimir.imprimir(entrada2);
 	}
 
 }
